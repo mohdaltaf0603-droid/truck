@@ -1,0 +1,156 @@
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgb(255 255 255 / 97%);
+  border-bottom: 1px solid #edf0f4;
+  backdrop-filter: blur(14px);
+}
+
+.navbar-inner {
+  display: flex;
+  min-height: 82px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 11px;
+}
+
+.brand-symbol {
+  display: grid;
+  width: 43px;
+  height: 43px;
+  place-items: center;
+  color: white;
+  background: var(--orange);
+  border-radius: 10px;
+}
+
+.brand strong,
+.brand small {
+  display: block;
+}
+
+.brand strong {
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.brand small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.desktop-nav a {
+  color: #4c5868;
+  font-size: 13px;
+  font-weight: 650;
+  transition: color 0.2s;
+}
+
+.desktop-nav a:hover {
+  color: var(--orange);
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.navbar-phone {
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  color: var(--navy);
+  background: #f3f5f8;
+  border: 0;
+  border-radius: 9px;
+}
+
+.mobile-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: flex-end;
+  background: rgb(7 15 27 / 55%);
+}
+
+.mobile-menu {
+  display: flex;
+  width: min(360px, 88vw);
+  height: 100%;
+  flex-direction: column;
+  gap: 7px;
+  padding: 24px;
+  background: white;
+  box-shadow: -10px 0 35px rgb(0 0 0 / 12%);
+  animation: slide-in 0.2s ease-out;
+}
+
+.mobile-menu-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  font-size: 21px;
+  font-weight: 850;
+}
+
+.icon-control {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  background: #f3f5f8;
+  border: 0;
+  border-radius: 9px;
+}
+
+.mobile-menu > a:not(.btn) {
+  padding: 14px 0;
+  color: var(--navy);
+  border-bottom: 1px solid var(--border);
+  font-weight: 700;
+}
+
+.mobile-menu > .btn {
+  margin-top: 18px;
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
